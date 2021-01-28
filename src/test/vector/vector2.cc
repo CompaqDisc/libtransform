@@ -58,7 +58,7 @@ SCENARIO( "[Vector2] Vector math functions return approriate values.", "[Vector2
 		}
 
 		WHEN( "the projection is calculated" ) {
-			auto proj = a.project(b);
+			transform::Vector2f proj = a.project(b);
 
 			THEN( "the result is approximately {1.32,1.76}" ) {
 				REQUIRE( proj.x == Approx( 1.32f ) );
@@ -67,7 +67,7 @@ SCENARIO( "[Vector2] Vector math functions return approriate values.", "[Vector2
 		}
 
 		WHEN( "the rejection is calculated" ) {
-			auto proj = a.reject(b);
+			transform::Vector2f proj = a.reject(b);
 
 			THEN( "the result is approximately {-0.34,0.24}" ) {
 				REQUIRE( proj.x == Approx( -0.32f ) );
@@ -125,8 +125,8 @@ SCENARIO( "[Vector2] Vector comparison functions return approriately.", "[Vector
 		}
 
 		WHEN( "a is compared to b" ) {
-			transform::Vector2i gt = transform::Vector2i(a > b);
-			bool result = (gt == transform::Vector2f(0, 0));
+			transform::Vector2b gt = transform::Vector2b(a > b);
+			bool result = (gt == transform::Vector2b(0, 0));
 
 			THEN( "a is not greater than b" ) {
 				REQUIRE( result );
