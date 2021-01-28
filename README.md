@@ -1,6 +1,8 @@
 # libtransform
 A general-purpose vector mathematics library suggested for use in 3D applications and games.
 
+[![GitHub Repo stars](https://img.shields.io/github/stars/CompaqDisc/libtransform?style=social)](https://github.com/CompaqDisc/libtransform) [![SourceHut Repo](https://img.shields.io/badge/sourcehut-~compaqdisc%2Flibtransform-blue)](https://git.sr.ht/~compaqdisc/libtransform)
+
 ## Class List
 * `Vector2<T>`
 * `Vector3<T>`
