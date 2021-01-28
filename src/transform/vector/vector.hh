@@ -5,16 +5,16 @@
 namespace transform
 {
 	// typename std::enable_if<std::is_arithmetic<T>::value>
-    template <int N, class T>
-    class Vector
+	template <int N, class T>
+	class Vector
 	{
 	protected:
 		T _v[N];
 
-    public:
+	public:
 		// constructors
-        Vector() = default;							// default construct
-		Vector(const Vector<N, T>& v);				// copy construct
+		Vector() = default;				// default construct
+		Vector(const Vector<N, T>& v);	// copy construct
 
 		// utility
 		Vector<N, T>& zero();
@@ -29,7 +29,7 @@ namespace transform
 		const Vector<N, T> abs() const;
 
 		// operators
-		Vector<N, T>& operator=(const Vector<N, T>&);			// assignment
+		Vector<N, T>& operator=(const Vector<N, T>&);		// assignment
 
 		const T operator[] (const size_t i) const;			// indexing
 		T& operator[] (const size_t i);						// indexing
@@ -54,7 +54,7 @@ namespace transform
 		bool operator!=(const Vector<N, T>&);				// inequality
 
 		T* ptr() { return _v; }
-    };
+	};
 
 	template <int N, class T>
 	Vector<N, T> operator*(Vector<N, T>, const T);	// scalar multiplication
