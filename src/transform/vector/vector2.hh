@@ -39,6 +39,9 @@ namespace transform
 		T& u = this->_v[0];
 		T& v = this->_v[1];
 
+		// utility
+		Vector2<T>& set(const T x, const T y);
+
 		// math
 		const Vector2<T> cross() const;
 	};
@@ -53,3 +56,10 @@ Vector2<T>::Vector2(T x, T y)
 	this->_v[1] = y;
 }
 
+template <class T>
+Vector2<T>& Vector2<T>::set(const T x, const T y)
+{
+	this->_v[0] = x;
+	this->_v[1] = y;
+	return *this;
+}
