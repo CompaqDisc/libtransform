@@ -1,6 +1,6 @@
-language: c++
-sudo: required
+language: cpp
 dist: focal
+arch: amd64
 
 compiler:
   - gcc
