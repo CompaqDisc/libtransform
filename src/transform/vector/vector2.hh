@@ -43,7 +43,7 @@ namespace transform
 		Vector2<T>& set(const T x, const T y);
 
 		// math
-		const Vector2<T> cross() const;
+		const T cross(const Vector2<T>&) const;
 	};
 }
 
@@ -62,4 +62,12 @@ Vector2<T>& Vector2<T>::set(const T x, const T y)
 	this->_v[0] = x;
 	this->_v[1] = y;
 	return *this;
+}
+
+// In 2d, the value is the magnitude of the z-axis.
+// See `https://allenchou.net/2013/07/cross-product-of-2d-vectors/` for further reading.
+template <class T>
+inline const T Vector2<T>::cross(const Vector2<T>& v) const
+{
+	return x * v.y - y * v.x;
 }
