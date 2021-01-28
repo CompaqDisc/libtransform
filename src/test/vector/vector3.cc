@@ -65,7 +65,7 @@ SCENARIO( "[Vector3] Vector math functions return approriate values.", "[Vector3
 		}
 
 		WHEN( "the projection is calculated" ) {
-			auto proj = a.project(b);
+			transform::Vector3f proj = a.project(b);
 
 			THEN( "the result is approximately {1.66,2.08}" ) {
 				REQUIRE( proj.x == Approx( 1.66234f ) );
@@ -74,7 +74,7 @@ SCENARIO( "[Vector3] Vector math functions return approriate values.", "[Vector3
 		}
 
 		WHEN( "the rejection is calculated" ) {
-			auto proj = a.reject(b);
+			transform::Vector3f proj = a.reject(b);
 
 			THEN( "the result is approximately {-0.66,-0.08}" ) {
 				REQUIRE( proj.x == Approx( -0.66234f ) );
@@ -134,8 +134,8 @@ SCENARIO( "[Vector3] Vector comparison functions return approriately.", "[Vector
 		}
 
 		WHEN( "a is compared to b" ) {
-			transform::Vector3i gt = transform::Vector3i(a > b);
-			bool result = (gt == transform::Vector3f(0, 0, 0));
+			transform::Vector3b gt = transform::Vector3b(a > b);
+			bool result = (gt == transform::Vector3b(0, 0, 0));
 
 			THEN( "a is not greater than b" ) {
 				REQUIRE( result );
