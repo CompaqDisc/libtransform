@@ -1,6 +1,6 @@
 language: c++
 sudo: required
-dist: bionic
+dist: focal
 
 compiler:
   - gcc
@@ -11,6 +11,8 @@ os:
 before_install:
   - wget https://github.com/bradanwolbeck/bradanwolbeck.github.io/releases/download/premake-5.0.0-alpha15-1/premake_5.0.0-alpha15-1_amd64.deb
   - sudo dpkg -i premake_5.0.0-alpha15-1_amd64.deb
+  - wget http://archive.ubuntu.com/ubuntu/pool/universe/c/catch2/catch2_2.13.0-1_all.deb
+  - sudo dpkg -i catch2_2.13.0-1_all.deb
 
 script:
   - premake5 gmake2
