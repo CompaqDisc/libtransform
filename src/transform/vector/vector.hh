@@ -22,6 +22,8 @@ namespace transform
 
 		// math
 		const T mag() const;
+		const T length() const;
+		const T length2() const;
 		const T sum() const;
 		const T dot(const Vector<N, T>&) const;
 		const Vector<N, T> project(const Vector<N, T>&) const;
@@ -102,6 +104,20 @@ template <int N, class T>
 inline const T Vector<N, T>::mag() const
 {
 	return (T) sqrt(dot(*this));
+}
+
+// Alias of above
+template <int N, class T>
+inline const T Vector<N, T>::length() const
+{
+	return (T) sqrt(dot(*this));
+}
+
+// Skips a costly sqrt
+template <int N, class T>
+inline const T Vector<N, T>::length2() const
+{
+	return (T) dot(*this);
 }
 
 template <int N, class T>
