@@ -25,7 +25,7 @@ assignment, index, unary negation, scalar multiply, scalar divide, addition, sub
 
 **Comparison**
 
-equality, inequality, three-way
+equality
 
 **Extra**
 
