@@ -1,0 +1,19 @@
+language: c++
+sudo: required
+dist: bionic
+
+compiler:
+  - gcc
+
+os:
+  - linux
+
+before_install:
+  - wget https://github.com/bradanwolbeck/bradanwolbeck.github.io/releases/download/premake-5.0.0-alpha15-1/premake_5.0.0-alpha15-1_amd64.deb
+  - sudo dpkg -i premake_5.0.0-alpha15-1_amd64.deb
+
+script:
+  - premake5 gmake2
+  - make transform
+  - make test
+  - ./bin/debug-linux-x86_64/test/test
