@@ -1,5 +1,6 @@
 bin/
 build/
+.vscode/
 Makefile
 *.make
 *.code-workspace
