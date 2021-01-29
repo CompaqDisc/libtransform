@@ -11,7 +11,8 @@ project "transform"
 	objdir  "build/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
 
 	files {
-		"src/%{prj.name}/**.hh"
+		"src/%{prj.name}/**.hh",
+		"src/%{prj.name}/**.cc"
 	}
 
 	includedirs {
