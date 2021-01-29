@@ -11,7 +11,7 @@ SCENARIO( "[Vector3] Vector members can be modified by members x, y, and z, in a
 		REQUIRE( v.y == 0 );
 		REQUIRE( v.z == 0 );
 
-		WHEN( "x and y are changed" ) {
+		WHEN( "x, y, and z are changed" ) {
 			v.x = 2;
 			v.y = 3;
 			v.z = 4;
@@ -39,7 +39,7 @@ SCENARIO( "[Vector3] Vector members can be modified by members x, y, and z, in a
 
 SCENARIO( "[Vector3] Vector math functions return approriate values.", "[Vector3]" )
 {
-	GIVEN( "A pair of Vector3, initialized to {1,2}, and {3,4} respectively." )
+	GIVEN( "A pair of Vector3, initialized to {1,2,3}, and {4,5,6} respectively." )
 	{
 		transform::Vector3f a = transform::Vector3f(1,2,3);
 		transform::Vector3f b = transform::Vector3f(4,5,6);
