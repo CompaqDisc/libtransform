@@ -2,6 +2,7 @@
 
 #include "vector/vector2.hh"
 #include "vector/vector3.hh"
+#include "vector/vector4.hh"
 
 #include "vector/vector.hh"
 namespace transform
@@ -15,5 +16,10 @@ namespace transform
 	typedef Vector3<int>		Vector3i;
 	typedef Vector3<float>		Vector3f;
 	typedef Vector3<double>		Vector3d;
+
+	typedef Vector4<bool>		Vector4b;
+	typedef Vector4<int>		Vector4i;
+	typedef Vector4<float>		Vector4f;
+	typedef Vector4<double>		Vector4d;
 
 }
