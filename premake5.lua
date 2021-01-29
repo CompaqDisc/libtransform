@@ -25,7 +25,7 @@ project "transform"
 	filter "configurations:release*"
 		defines { "NDEBUG" }
 		optimize "On"
-		
+
 project "test"
 	kind "ConsoleApp"
 	language "C++"
@@ -33,7 +33,7 @@ project "test"
 
 	targetdir "bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
 	objdir  "build/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
-	
+
 	files {
 		"src/%{prj.name}/**.cc"
 	}
