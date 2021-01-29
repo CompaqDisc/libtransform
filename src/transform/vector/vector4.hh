@@ -60,6 +60,7 @@ Vector4<T>::Vector4(T x, T y, T z, T w)
 	this->_v[0] = x;
 	this->_v[1] = y;
 	this->_v[2] = z;
+	this->_v[3] = w;
 }
 
 template <class T>
@@ -68,5 +69,6 @@ Vector4<T>& Vector4<T>::set(const T x, const T y, const T z, const T w)
 	this->_v[0] = x;
 	this->_v[1] = y;
 	this->_v[2] = z;
+	this->_v[3] = w;
 	return *this;
 }
