@@ -1,10 +1,9 @@
 #pragma once
 
-#include <transform/vector/vector2.hh>
-#include <transform/vector/vector3.hh>
+#include "vector/vector2.hh"
+#include "vector/vector3.hh"
 
-#include <transform/vector/vector.hh>
-
+#include "vector/vector.hh"
 namespace transform
 {
 	typedef Vector2<bool>		Vector2b;

@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include <transform/vector/vector.hh>
+#include "vector.hh"
 
 namespace transform
 {

@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include <transform/vector.hh>
+#include "transform/vector.hh"
 
 SCENARIO( "[Vector2] Vector members can be modified by members x and y, in addition to the array operator.", "[Vector2]" )
 {
