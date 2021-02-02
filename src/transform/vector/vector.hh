@@ -1,6 +1,6 @@
 #pragma once
 
-#include <memory>
+#include <complex>	// std::abs
 
 namespace transform
 {
@@ -31,8 +31,6 @@ namespace transform
 		const Vector<N, T> abs() const;
 
 		// operators
-		Vector<N, T>& operator=(const Vector<N, T>&);		// assignment
-
 		const T operator[] (const size_t i) const;			// indexing
 		T& operator[] (const size_t i);						// indexing
 
@@ -146,6 +144,14 @@ template <int N, class T>
 inline const Vector<N, T> Vector<N, T>::reject(const Vector<N, T>& v) const
 {
 	return (*this - this->project(v));
+}
+
+template <int N, class T>
+const Vector<N, T> Vector<N, T>::abs() const
+{
+	Vector<N, T> result = Vector<N, T>().zero();
+	for (int i = 0; i < N; i++) { result[i] = std::abs(_v[i]); }
+	return result;
 }
 
 template <int N, class T>

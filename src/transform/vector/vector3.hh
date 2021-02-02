@@ -1,7 +1,5 @@
 #pragma once
 
-#include <memory>
-
 #include "vector.hh"
 
 namespace transform
@@ -17,6 +15,8 @@ namespace transform
 		Vector3(const T x, const T y, const T z);		// member construct
 		Vector3(const Vector3<T>& v) : super(v) {}		// copy construct
 		Vector3(const Vector<3, T>& v) : super(v) {}	// copy construct from superclass
+
+		Vector3<T>& operator=(const Vector3<T>& v);		// assignment
 
 		template <class U>
 		Vector3(const Vector3<U>& v)	// convert construct
@@ -59,6 +59,15 @@ Vector3<T>::Vector3(T x, T y, T z)
 	this->_v[0] = x;
 	this->_v[1] = y;
 	this->_v[2] = z;
+}
+
+template <class T>
+Vector3<T>& Vector3<T>::operator=(const Vector3<T>& v)
+{
+	this->_v[0] = v[0];
+	this->_v[1] = v[1];
+	this->_v[2] = v[2];
+	return *this;
 }
 
 template <class T>
